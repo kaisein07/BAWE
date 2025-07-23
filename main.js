@@ -1,3 +1,4 @@
+
 // Variables globales
 let currentRooms = [];
 let currentServices = [];
@@ -81,63 +82,6 @@ function createRoomCard(room) {
     `;
     
     return col;
-}
-
-// Afficher les détails d'une chambre
-function showRoomDetails(roomId) {
-    const room = currentRooms.find(r => r.id === roomId);
-    if (!room) return;
-    
-    const modal = document.createElement('div');
-    modal.className = 'modal fade';
-    modal.id = 'roomModal';
-    modal.setAttribute('tabindex', '-1');
-    
-    modal.innerHTML = `
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">${room.type}</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="${room.image}" class="img-fluid rounded mb-3" alt="${room.type}">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="room-price mb-3">${formatPrice(room.price)} ${room.currency}/nuit</div>
-                            <p>${room.description}</p>
-                            <div class="mb-3">
-                                <strong>Capacité:</strong> ${room.capacity} personnes
-                            </div>
-                            <div class="mb-3">
-                                <strong>Équipements:</strong>
-                                <ul class="list-unstyled mt-2">
-                                    ${room.amenities.map(amenity => `<li><i class="fas fa-check text-success me-2"></i>${amenity}</li>`).join('')}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                    <a href="https://wa.me/${currentResidenceInfo.whatsapp.replace(/\s/g, '')}?text=Bonjour, je souhaite réserver une ${room.type}" 
-                       class="btn btn-primary" target="_blank">
-                        <i class="fab fa-whatsapp me-2"></i>Réserver
-                    </a>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    document.body.appendChild(modal);
-    const bsModal = new bootstrap.Modal(modal);
-    bsModal.show();
-    
-    modal.addEventListener('hidden.bs.modal', function() {
-        document.body.removeChild(modal);
-    });
 }
 
 // Rendu des services
@@ -305,16 +249,6 @@ function initializeNavigation() {
     if (whatsappBtn) {
         whatsappBtn.href = `https://wa.me/${currentResidenceInfo.whatsapp.replace(/\s/g, '')}?text=Bonjour, je souhaite réserver une chambre`;
     }
-    
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
 }
 
 // Initialiser les animations
@@ -334,175 +268,7 @@ function initializeAnimations() {
     }, observerOptions);
     
     // Observer les éléments avec animation
-    document.querySelectorAll('.card, .service-item, .gallery- class="nav-link" href="item').forEach(el => {
+    document.querySelectorAll('.card, .service-item, .gallery-item').forEach(el => {
         observer.observe(el);
     });
 }
-
-// Fonctions utilitaires
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
-
-// Recherche et filtrage
-function filterRooms(criteria) {
-    let filteredRooms = currentRooms.filter(room => room.available);
-    
-    if (criteria.maxPrice) {
-        filteredRooms = filteredRooms.filter(room => room.price <= criteria.maxPrice);
-    }
-    
-    if (criteria.minCapacity) {
-        filteredRooms = filteredRooms.filter(room => room.capacity >= criteria.minCapacity);
-    }
-    
-    if (criteria.amenities && criteria.amenities.length > 0) {
-        filteredRooms = filteredRooms.filter(room => 
-            criteria.amenities.every(amenity => 
-                room.amenities.some(roomAmenity => 
-                    roomAmenity.toLowerCase().includes(amenity.toLowerCase())
-                )
-            )
-        );
-    }
-    
-    return filteredRooms;
-}
-
-// Mise à jour des informations de contact
-function updateContactInfo() {
-    const contactItems = document.querySelectorAll('.contact-item span');
-    if (contactItems.length >= 4) {
-        contactItems[0].textContent = currentResidenceInfo.address;
-        contactItems[1].textContent = currentResidenceInfo.phone;
-        contactItems[2].textContent = currentResidenceInfo.whatsapp;
-        contactItems[3].textContent = currentResidenceInfo.email;
-    }
-}
-
-// Performance monitoring
-function measurePageLoadTime() {
-    window.addEventListener('load', function() {
-        const loadTime = performance.now();
-        console.log('Page load time:', loadTime, 'ms');
-    });
-}
-
-// Initialiser la mesure de performance
-measurePageLoadTime();
-
-// Gestion des erreurs globales
-window.addEventListener('error', function(event) {
-    console.error('Erreur JavaScript:', event.error);
-});
-
-// Gestion des promesses rejetées
-window.addEventListener('unhandledrejection', function(event) {
-    console.error('Promesse rejetée:', event.reason);
-});
-
-// Export des fonctions pour l'admin
-window.roomsManagement = {
-    getRooms: () => currentRooms,
-    addRoom: (room) => {
-        room.id = generateId();
-        currentRooms.push(room);
-        saveData('roomsData', currentRooms);
-        renderRooms();
-    },
-    updateRoom: (roomId, updates) => {
-        const roomIndex = currentRooms.findIndex(r => r.id === roomId);
-        if (roomIndex !== -1) {
-            currentRooms[roomIndex] = { ...currentRooms[roomIndex], ...updates };
-            saveData('roomsData', currentRooms);
-            renderRooms();
-        }
-    },
-    deleteRoom: (roomId) => {
-        currentRooms = currentRooms.filter(r => r.id !== roomId);
-        saveData('roomsData', currentRooms);
-        renderRooms();
-    }
-};
-
-window.servicesManagement = {
-    getServices: () => currentServices,
-    addService: (service) => {
-        service.id = generateId();
-        currentServices.push(service);
-        saveData('servicesData', currentServices);
-        renderServices();
-    },
-    updateService: (serviceId, updates) => {
-        const serviceIndex = currentServices.findIndex(s => s.id === serviceId);
-        if (serviceIndex !== -1) {
-            currentServices[serviceIndex] = { ...currentServices[serviceIndex], ...updates };
-            saveData('servicesData', currentServices);
-            renderServices();
-        }
-    },
-    deleteService: (serviceId) => {
-        currentServices = currentServices.filter(s => s.id !== serviceId);
-        saveData('servicesData', currentServices);
-        renderServices();
-    }
-};
-
-window.galleryManagement = {
-    getGallery: () => currentGallery,
-    addImage: (image) => {
-        image.id = generateId();
-        currentGallery.push(image);
-        saveData('galleryData', currentGallery);
-        renderGallery();
-    },
-    updateImage: (imageId, updates) => {
-        const imageIndex = currentGallery.findIndex(i => i.id === imageId);
-        if (imageIndex !== -1) {
-            currentGallery[imageIndex] = { ...currentGallery[imageIndex], ...updates };
-            saveData('galleryData', currentGallery);
-            renderGallery();
-        }
-    },
-    deleteImage: (imageId) => {
-        currentGallery = currentGallery.filter(i => i.id !== imageId);
-        saveData('galleryData', currentGallery);
-        renderGallery();
-    }
-};
-
-window.contactsManagement = {
-    getContacts: () => currentContacts,
-    updateContactStatus: (contactId, status) => {
-        const contactIndex = currentContacts.findIndex(c => c.id === contactId);
-        if (contactIndex !== -1) {
-            currentContacts[contactIndex].status = status;
-            saveData('contactsData', currentContacts);
-        }
-    },
-    deleteContact: (contactId) => {
-        currentContacts = currentContacts.filter(c => c.id !== contactId);
-        saveData('contactsData', currentContacts);
-    }
-};

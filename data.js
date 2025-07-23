@@ -1,3 +1,4 @@
+
 // Données pour les chambres
 const roomsData = [
     {
@@ -15,7 +16,7 @@ const roomsData = [
             "Réfrigérateur",
             "Ventilateur de plafond"
         ],
-        image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        image: "picture1_1753290700856.jpg",
         available: true,
         capacity: 2
     },
@@ -36,7 +37,7 @@ const roomsData = [
             "Bureau de travail",
             "Balcon privé"
         ],
-        image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        image: "picture2_1753290700855.jpg",
         available: true,
         capacity: 3
     },
@@ -59,7 +60,7 @@ const roomsData = [
             "Service en chambre 24h",
             "Terrasse privée"
         ],
-        image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        image: "picture3_1753290700853.jpg",
         available: true,
         capacity: 4
     }
@@ -125,62 +126,62 @@ const servicesData = [
     }
 ];
 
-// Données pour la galerie
+// Données pour la galerie - Utilisation des images locales
 const galleryData = [
     {
         id: 1,
-        url: "asset/picture17.jpg",
+        url: "picture1.jpg",
         caption: "Chambre Standard - Vue intérieure",
         category: "room",
         active: true
     },
     {
         id: 2,
-        url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        url: "picture2.jpg",
         caption: "Chambre Deluxe - Confort moderne",
         category: "room",
         active: true
     },
     {
         id: 3,
-        url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        url: "picture3.jpg",
         caption: "Suite Executive - Luxe et élégance",
         category: "room",
         active: true
     },
     {
         id: 4,
-        url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-        caption: "Réception - Accueil chaleureux",
+        url: "picture4.jpg",
+        caption: "Salon - Espace détente",
         category: "facility",
         active: true
     },
     {
         id: 5,
-        url: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+        url: "picture5_1753290700849.jpg",
         caption: "Salle de bain - Équipements modernes",
         category: "facility",
         active: true
     },
     {
         id: 6,
-        url: "https://images.unsplash.com/photo-1566195992011-5f6b21e539aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-        caption: "Façade - Architecture moderne",
-        category: "exterior",
-        active: true
-    },
-    {
-        id: 7,
-        url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-        caption: "Salon - Espace détente",
+        url: "picture6_1753290700846.jpg",
+        caption: "Salon VIP - Espace de réception",
         category: "facility",
         active: true
     },
     {
+        id: 7,
+        url: "picture7_1753290700842.jpg",
+        caption: "Chambre familiale - Confort pour tous",
+        category: "room",
+        active: true
+    },
+    {
         id: 8,
-        url: "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-        caption: "Parking - Stationnement sécurisé",
-        category: "exterior",
+        url: "picture8_1753290700839.jpg",
+        caption: "Kitchenette - Espace cuisine équipé",
+        category: "facility",
         active: true
     }
 ];
