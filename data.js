@@ -126,62 +126,90 @@ const servicesData = [
     }
 ];
 
-// Données pour la galerie - Utilisation des images locales
+// Données pour la galerie - Utilisation des images du dossier asset
 const galleryData = [
     {
         id: 1,
-        url: "picture1.jpg",
+        url: "asset/picture5.jpg",
         caption: "Chambre Standard - Vue intérieure",
         category: "room",
         active: true
     },
     {
         id: 2,
-        url: "picture2.jpg",
+        url: "asset/picture6.jpg",
         caption: "Chambre Deluxe - Confort moderne",
         category: "room",
         active: true
     },
     {
         id: 3,
-        url: "picture3.jpg",
+        url: "asset/picture7.jpg",
         caption: "Suite Executive - Luxe et élégance",
         category: "room",
         active: true
     },
     {
         id: 4,
-        url: "picture4.jpg",
+        url: "asset/picture8.jpg",
         caption: "Salon - Espace détente",
         category: "facility",
         active: true
     },
     {
         id: 5,
-        url: "picture5_1753290700849.jpg",
+        url: "asset/picture9.jpg",
         caption: "Salle de bain - Équipements modernes",
         category: "facility",
         active: true
     },
     {
         id: 6,
-        url: "picture6_1753290700846.jpg",
+        url: "asset/picture10.jpg",
         caption: "Salon VIP - Espace de réception",
         category: "facility",
         active: true
     },
     {
         id: 7,
-        url: "picture7_1753290700842.jpg",
+        url: "asset/picture11.jpg",
         caption: "Chambre familiale - Confort pour tous",
         category: "room",
         active: true
     },
     {
         id: 8,
-        url: "picture8_1753290700839.jpg",
+        url: "asset/picture12.jpg",
         caption: "Kitchenette - Espace cuisine équipé",
         category: "facility",
+        active: true
+    },
+    {
+        id: 9,
+        url: "asset/picture13.jpg",
+        caption: "Espace commun - Détente et convivialité",
+        category: "facility",
+        active: true
+    },
+    {
+        id: 10,
+        url: "asset/picture14.jpg",
+        caption: "Chambre Premium - Confort supérieur",
+        category: "room",
+        active: true
+    },
+    {
+        id: 11,
+        url: "asset/picture15.jpg",
+        caption: "Terrasse - Vue panoramique",
+        category: "facility",
+        active: true
+    },
+    {
+        id: 12,
+        url: "asset/picture16.jpg",
+        caption: "Chambre de luxe - Raffinement absolu",
+        category: "room",
         active: true
     }
 ];
