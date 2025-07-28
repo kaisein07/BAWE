@@ -3,74 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Résidences Parakou - Logement de qualité à Parakou</title>
-    <meta name="description" content="Résidences de voyageurs modernes au cœur de Parakou, Bénin. Chambres confortables, service de qualité et hospitalité authentique.">
-    <meta name="keywords" content="résidence, hôtel, Parakou, Bénin, logement, voyage, hébergement">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+    <title>Résidence Bawé - Parakou</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home">
-                <i class="fas fa-home me-2"></i>Résidences Parakou
+            <a class="navbar-brand fw-bold" href="#accueil">
+                <i class="fas fa-home me-2"></i>Résidence Bawé
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Accueil</a>
+                        <a class="nav-link" href="#accueil">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#rooms">Chambres</a>
+                        <a class="nav-link" href="#chambres">Chambres</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Galerie</a>
+                        <a class="nav-link" href="#galerie">Galerie</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link whatsapp-btn" href="https://wa.me/22997000000?text=Bonjour, je souhaite réserver une chambre" target="_blank">
-                            <i class="fab fa-whatsapp me-1"></i>Réserver
-                        </a>
-                    </li>
-                    
                 </ul>
+                <a href="https://wa.me/22955015441?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations
+" class="btn btn-success" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i>Réserver
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-8 mx-auto text-center text-white">
-                    <h1 class="display-4 fw-bold mb-4 animate-fade-in">
-                        Bienvenue aux Résidences Parakou
-                    </h1>
-                    <p class="lead mb-5 animate-fade-in" style="animation-delay: 0.3s;">
-                        Découvrez le confort moderne au cœur de Parakou. Nos résidences offrent un cadre parfait pour vos séjours d'affaires ou de loisirs.
-                    </p>
-                    <div class="hero-buttons animate-fade-in" style="animation-delay: 0.6s;">
-                        <a href="#rooms" class="btn btn-primary btn-lg me-3">
-                            <i class="fas fa-bed me-2"></i>Voir les chambres
-                        </a>
-                        <a href="https://wa.me/22997000000?text=Bonjour, je souhaite réserver une chambre" class="btn btn-outline-light btn-lg" target="_blank">
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 text-white fw-bold mb-4">
+                            Bienvenue à la Résidence Bawé
+                        </h1>
+                        <p class="lead text-white mb-4">
+                            Votre résidence de standing située dans le quartier Bawé à Parakou. 
+                            Confort, modernité et tranquillité vous attendent.
+                        </p>
+                        <a href="#chambres" class="btn btn-primary btn-lg me-3">Découvrir nos chambres</a>
+                        <a href="https://wa.me/22955015441?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations
+" class="btn btn-success btn-lg" target="_blank">
                             <i class="fab fa-whatsapp me-2"></i>Réserver maintenant
                         </a>
                     </div>
@@ -79,115 +68,290 @@
         </div>
     </section>
 
-    <!-- Rooms Section -->
-    <section id="rooms" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-primary mb-3">Nos Chambres</h2>
-                <p class="lead text-muted">Découvrez nos différents types de chambres, conçues pour votre confort</p>
-            </div>
-            <div class="row" id="rooms-container">
-                <!-- Les chambres seront chargées ici via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-primary mb-3">Nos Services</h2>
-                <p class="lead text-muted">Profitez de nos services de qualité pour un séjour inoubliable</p>
-            </div>
-            <div class="row" id="services-container">
-                <!-- Les services seront chargés ici via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold text-primary mb-3">Galerie Photo</h2>
-                <p class="lead text-muted">Découvrez nos installations et chambres en images</p>
-            </div>
-            <div class="row" id="gallery-container">
-                <!-- Les images seront chargées ici via JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-primary text-white">
+    <!-- Section Chambres -->
+    <section id="chambres" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <h2 class="display-5 fw-bold mb-4">Contactez-nous</h2>
-                    <div class="contact-info">
-                        <div class="contact-item mb-3">
-                            <i class="fas fa-map-marker-alt me-3"></i>
-                            <span>Quartier Bawé, Parakou, Bénin</span>
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Nos Chambres</h2>
+                    <p class="lead text-muted">Choisissez parmi nos trois catégories de chambres</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Chambre Standard -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="attached_assets/picture14_1753646596045.jpg" class="card-img-top" alt="Chambre Standard">
+                        <div class="card-body">
+                            <h5 class="card-title">Chambre Standard</h5>
+                            <p class="card-text">Chambre confortable avec tous les équipements essentiels.</p>
+                            <h6 class="text-primary fw-bold">12.000 FCFA / jrs & 10.000 FCFA / jrs 
+                                à partir du 3 jrs </h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bed text-primary me-2"></i>Lit confortable</li>
+                                <li><i class="fas fa-wifi text-primary me-2"></i>Wi-Fi gratuit</li>
+                                <li><i class="fas fa-fan text-primary me-2"></i>Ventilateur</li>
+                                <li><i class="fas fa-shower text-primary me-2"></i>Salle de bain privée</li>
+                                <li><i class="fas fa-utensils text-primary me-2"></i>Cuisine équipée</li>
+                            </ul>
                         </div>
-                        <div class="contact-item mb-3">
-                            <i class="fas fa-phone me-3"></i>
-                            <span>+229 97 00 00 00</span>
-                        </div>
-                        <div class="contact-item mb-3">
-                            <i class="fab fa-whatsapp me-3"></i>
-                            <span>+229 97 00 00 00</span>
-                        </div>
-                        <div class="contact-item mb-3">
-                            <i class="fas fa-envelope me-3"></i>
-                            <span>contact@residences-parakou.com</span>
+                        <div class="card-footer">
+                            <a href="https://wa.me/22955015441?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations
+" class="btn btn-primary w-100" target="_blank">Réserver</a>
                         </div>
                     </div>
-                    <div class="social-links mt-4">
-                        <a href="#" class="text-white me-3" target="_blank">
-                            <i class="fab fa-facebook fa-2x"></i>
-                        </a>
-                        <a href="#" class="text-white me-3" target="_blank">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a href="#" class="text-white" target="_blank">
-                            <i class="fab fa-twitter fa-2x"></i>
-                        </a>
+                </div>
+
+                <!-- Chambre Supérieure -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="attached_assets/picture13_1753646596069.jpg" class="card-img-top" alt="Chambre Supérieure">
+                        <div class="card-body">
+                            <h5 class="card-title">Chambre Supérieure</h5>
+                            <p class="card-text">Plus d'espace et de confort avec un salon intégré.</p>
+                            <h6 class="text-primary fw-bold">12.000 FCFA / jrs & 10.000 FCFA / jrs 
+                                à partir du 3 jrs</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bed text-primary me-2"></i>Lit double</li>
+                                <li><i class="fas fa-wifi text-primary me-2"></i>Wi-Fi gratuit</li>
+                                <li><i class="fas fa-snowflake text-primary me-2"></i>Climatisation</li>
+                                <li><i class="fas fa-couch text-primary me-2"></i>Salon meublé</li>
+                                <li><i class="fas fa-tv text-primary me-2"></i>Télévision</li>
+                                <li><i class="fas fa-utensils text-primary me-2"></i>Cuisine équipée</li>
+                                <li><i class="fas fa-car text-primary me-2"></i>Parking privé</li>
+                                <li><i class="fas fa-shower text-primary me-2"></i>Salle de bain privée</li>
+
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/22955015441?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations
+" class="btn btn-primary w-100" target="_blank">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suite Deluxe -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <div class="badge bg-warning text-dark position-absolute top-0 end-0 m-2">Premium</div>
+                        <img src="attached_assets/picture12_1753646596086.jpg" class="card-img-top" alt="Suite Deluxe">
+                        <div class="card-body">
+                            <h5 class="card-title">Suite Deluxe</h5>
+                            <p class="card-text">Notre suite la plus luxueuse trois chambre un salon avec cuisine équipée.</p>
+                            <h6 class="text-primary fw-bold">25.000 FCFA / jrs & 20.000 FCFA / jrs 
+                                à partir du 3 jrs</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bed text-primary me-2"></i>Lit double</li>
+                                <li><i class="fas fa-wifi text-primary me-2"></i>Wi-Fi gratuit</li>
+                                <li><i class="fas fa-snowflake text-primary me-2"></i>Climatisation</li>
+                                <li><i class="fas fa-utensils text-primary me-2"></i>Cuisine équipée</li>
+                                <li><i class="fas fa-couch text-primary me-2"></i>Salon meublé</li>
+                                <li><i class="fas fa-tv text-primary me-2"></i>Smart TV</li>
+                                <li><i class="fas fa-car text-primary me-2"></i>Parking privé</li>
+                                <li><i class="fas fa-shower text-primary me-2"></i>Salle de bain privée</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://wa.me/22955015441?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations
+" class="btn btn-warning w-100" target="_blank">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Nos Services</h2>
+                    <p class="lead text-muted">Des services de qualité pour votre confort</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-wifi fa-3x text-primary mb-3"></i>
+                        <h5>Wi-Fi Gratuit</h5>
+                        <p>Connexion internet haut débit dans toutes les chambres</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-car fa-3x text-primary mb-3"></i>
+                        <h5>Parking Sécurisé</h5>
+                        <p>Stationnement gratuit et sécurisé pour votre véhicule</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                        <h5>Sécurité 24h/24</h5>
+                        <p>Surveillance continue pour votre tranquillité</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-concierge-bell fa-3x text-primary mb-3"></i>
+                        <h5>Service Client</h5>
+                        <p>Accueil chaleureux et assistance personnalisée</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-broom fa-3x text-primary mb-3"></i>
+                        <h5>Ménage Quotidien</h5>
+                        <p>Nettoyage quotidien des chambres inclus</p>
+                    </div>
+                </div>
+               <!-- <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-tshirt fa-3x text-primary mb-3"></i>
+                        <h5>Blanchisserie</h5>
+                        <p>Service de lavage et repassage disponible</p>
+                    </div>
+                </div> 
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
+                        <h5>Restaurant</h5>
+                        <p>Cuisine locale et internationale sur commande</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-item">
+                        <i class="fas fa-taxi fa-3x text-primary mb-3"></i>
+                        <h5>Transport</h5>
+                        <p>Service de taxi et navette disponible</p>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section id="galerie" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Galerie</h2>
+                    <p class="lead text-muted">Découvrez nos espaces en images</p>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture5_1753646596217.jpg" class="img-fluid rounded shadow-sm" alt="Chambre 1" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture6_1753646596182.jpg" class="img-fluid rounded shadow-sm" alt="Chambre 2" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture7_1753646596164.jpg" class="img-fluid rounded shadow-sm" alt="Chambre 3" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture8_1753646596148.jpg" class="img-fluid rounded shadow-sm" alt="Salle de bain" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture9_1753646596126.jpg" class="img-fluid rounded shadow-sm" alt="Cuisine" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture10_1753646596119.jpg" class="img-fluid rounded shadow-sm" alt="Couloir" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture11_1753646596099.jpg" class="img-fluid rounded shadow-sm" alt="Chambre suite" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-item">
+                        <img src="attached_assets/picture12_1753646596086.jpg" class="img-fluid rounded shadow-sm" alt="Salon" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="showImage(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Galerie -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">Contactez-nous</h2>
+                    <p class="lead">Nous sommes à votre disposition</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card bg-secondary h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">
+                                <i class="fas fa-map-marker-alt me-2"></i>Nos Informations
+                            </h5>
+                            <div class="contact-info">
+                                <p><i class="fas fa-home me-2"></i><strong>Adresse:</strong><br>
+                                Quartier Bawé, Parakou, Bénin</p>
+                                <p><i class="fas fa-phone me-2"></i><strong>Téléphone:</strong><br>
+                                +229 96 00 00 00</p>
+                                <p><i class="fas fa-envelope me-2"></i><strong>Email:</strong><br>
+                                babioaboudou93@gmail.com</p>
+                                <p><i class="fab fa-whatsapp me-2"></i><strong>WhatsApp:</strong><br>
+                                <a href="https://wa.me/22996000000" class="text-success" target="_blank">Nous contacter</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="contact-form bg-white p-4 rounded">
-                        <h4 class="text-primary mb-4">Envoyez-nous un message</h4>
-                        <form id="contactForm">
-                            <div class="mb-3">
-                                <label for="name" class="form-label text-dark">Nom complet</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label text-dark">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label text-dark">Téléphone</label>
-                                <input type="tel" class="form-control" id="phone">
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label text-dark">Sujet</label>
-                                <select class="form-select" id="subject" required>
-                                    <option value="">Choisissez un sujet</option>
-                                    <option value="reservation">Réservation</option>
-                                    <option value="information">Information</option>
-                                    <option value="complaint">Réclamation</option>
-                                    <option value="other">Autre</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label text-dark">Message</label>
-                                <textarea class="form-control" id="message" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">
-                                <i class="fas fa-paper-plane me-2"></i>Envoyer le message
-                            </button>
-                        </form>
+                    <div class="card bg-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">
+                                <i class="fas fa-paper-plane me-2"></i>Envoyez-nous un message
+                            </h5>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Votre téléphone">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Votre message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Envoyer le message
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,33 +359,39 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white text-center">
+    <footer class="bg-primary text-white py-4">
         <div class="container">
-            <p class="mb-0">&copy; 2024 Résidences Parakou. Tous droits réservés.</p>
-            <p class="mt-2">
-                <small>Parakou, Bénin - Votre confort, notre priorité</small>
-            </p>
-        </div>
-    </footer>
-
-    <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel">Image</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5>Résidence Bawé</h5>
+                    <p>Votre résidence de standing à Parakou</p>
                 </div>
-                <div class="modal-body text-center">
-                    <img id="modalImage" src="" alt="" class="img-fluid">
+                <div class="col-lg-6 text-lg-end">
+                    <div class="social-links mb-3">
+                        <a href="https://wa.me/22955015441?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations
+" class="text-white me-3" target="_blank">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.facebook.com/BabioAbdoulMoumine" target="_blank" class="text-white me-3">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                       <!-- <a href="#" class="text-white">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>-->
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 Résidence Bawé. Tous droits réservés. | Créé par <strong>Babio Aboudou Moumine</strong></p>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
