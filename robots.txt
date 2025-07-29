@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://residences-bawe-parakou.netlify.app/sitemap.xml
